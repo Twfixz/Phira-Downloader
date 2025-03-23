@@ -215,8 +215,8 @@
             const successMessage = document.getElementById('success-message');
             
             // CORS proxy URL
-            const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(fileUrl);
-            const fileResponse = await fetch(proxyUrl);
+            const proxyWorker = 'https://phira-proxy.username.workers.dev/?url='
+            const fileResponse = await fetch(proxyWorker);
             
             // Store chart data
             let chartData = null;
