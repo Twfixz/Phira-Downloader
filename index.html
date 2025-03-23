@@ -215,7 +215,7 @@
             const successMessage = document.getElementById('success-message');
             
             // CORS proxy URL
-            const proxyWorker = 'https://phira-proxy.username.workers.dev/?url='
+            const proxyWorker = 'https://phira-proxy.username.workers.dev/?url=' + encodeURIComponent(fileUrl);
             const fileResponse = await fetch(proxyWorker);
             
             // Store chart data
