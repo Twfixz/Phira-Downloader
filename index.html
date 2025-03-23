@@ -215,7 +215,8 @@
             const successMessage = document.getElementById('success-message');
             
             // CORS proxy URL
-            const corsProxy = 'https://corsproxy.io/?url=';
+            const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(fileUrl);
+            const fileResponse = await fetch(proxyUrl);
             
             // Store chart data
             let chartData = null;
